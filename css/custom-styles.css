@@ -116,6 +116,7 @@ p {
     background-color: #ed6c05;
     position: relative;
     border: 1px solid #ed6c05;
+    cursor: pointer;
 }
 .custom-button-prime, .empty-button-prime {
     font-size: 1.125em;
@@ -636,8 +637,7 @@ footer .title {
 }
 
 .main-page .events {
-     background: transparent url('../source/images/background-all-icons.png') no-repeat center;
-     background-size: cover;
+     background: transparent url('../source/images/background-all-icons.png') center;
      margin-top: 150px;
  }
 .main-page .events .wrapper {
@@ -781,6 +781,7 @@ footer .title {
     -moz-border-radius: 100%;
     border-radius: 100%;
     line-height: 1.5625em;
+    text-align: center;
 }
 .page-nav ul li a:hover, .page-nav ul li a.active {
     text-decoration: none;
@@ -805,8 +806,8 @@ footer .title {
     clear: both;
 }
 .article-card .image-wrap {
-    width: 300px;
-    padding-top: 200px;
+    width: 30%;
+    padding-top: 20%;
     float: left;
 }
 .article-info {
@@ -815,6 +816,7 @@ footer .title {
 }
 .article-card-footer {
     position: relative;
+    margin-top: 20px;
 }
 .article-card-footer:before {
     content: '';
@@ -841,6 +843,115 @@ footer .title {
     background-color: #ffffff;
     position: relative;
     z-index: 1;
+}
+
+/******************************
+******* vacancies page ********
+******************************/
+
+.vacancy-menu {
+    width: 30%;
+    background: transparent url('../source/images/background-all-icons.png') 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: -40px;
+    padding-top: 25px;
+}
+.vacancy-menu h4 {
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+.vacancy-menu ul li {
+    display: block;
+}
+.vacancy-menu ul li a {
+    font-size: 1.125em;
+    display: block;
+    padding: 10px 25px;
+}
+.vacancy-menu ul li a:hover {
+    text-decoration: none;
+    color: #ed6c05;
+}
+.vacancy-menu ul li a.active {
+    background-color: #ed6c05;
+    color: #ffffff;
+}
+.vacancy-info {
+    width: 65%;
+}
+.vacancy-info p, .vacancy-info ul {
+    margin-top: 15px;
+}
+.vacancy-info .title {
+    color: #ed6c05;
+    font-size: 1.125em;
+}
+.vacancy-info ul li:before {
+    content: '-';
+    margin-right: 5px;
+}
+.vacancy-header {
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.vacancy-header .vacancy-info-item {
+    display: inline-block;
+}
+.vacancy-header .vacancy-info-item:first-child {
+    margin-right: 50px;
+}
+.vacancy-info form {
+    margin-top: 50px;
+}
+.vacancy-info form input {
+    display: none;
+}
+
+/******************************
+**** vacancies-absent-page ****
+******************************/
+
+/*.vacancies-absent-page {
+    margin-bottom: 10%;
+    padding-bottom: 15%;
+    background: transparent url('../source/images/background-no-vacanvies-full.png') no-repeat center;
+    background-size: cover;
+}*/
+.vacancies-absent-page .wrapper:after {
+    content: '';
+    display: block;
+    width: 48.6%;
+    padding-top: 42%;
+    background: transparent url('../source/images/background-no-vacanvies.png') no-repeat center;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    bottom: -26.5%;
+}
+.vacancies-absent-page:after {
+    content: '';
+    display: block;
+    height: 250px;
+    background: linear-gradient(to right, #f5f5f5 0, #ebebeb 50%, #f5f5f5 100%);
+    margin-bottom: 7%;
+}
+.vacancies-absent-page .text {
+    display: inline-block;
+    background: transparent url('../source/images/background-no-vacanvies-text.png') no-repeat center;
+    background-size: 100% 100%;
+    padding: 6em 4em 5em 5em;
+    margin-bottom: 5%;
+}
+.vacancies-absent-page .text p {
+    margin-top: 0;
+    font-size: 1.875em;
+}
+.vacancies-absent-page .text p:last-child {
+    color: #ed6c05;
+    margin-top: 0.8em;
 }
 
 
@@ -983,6 +1094,14 @@ footer .title {
     .events-page .to-events {
         right: 10px;
     }
+    .vacancies-absent-page .wrapper:after, .vacancies-absent-page:after {
+        display: none;
+    }
+    .vacancies-absent-page .text {
+        background: none;
+        padding: 6em 4em 5em 3em;
+        margin-bottom: 5%;
+    }
 
 }
 
@@ -1078,9 +1197,31 @@ footer .title {
     }
     .page-nav-start, .page-nav-end, .page-nav ul {
         display: block;
+        text-align: left;
     }
     .page-nav ul {
         margin: 10px 0;
+    }
+    .article-card {
+        margin-bottom: 50px;
+    }
+    .article-card .image-wrap {
+        width: 300px;
+        padding-top: 200px;
+        float: none;
+        margin-bottom: 20px;
+    }
+    .article-info {
+        width: 100%;
+        float: none;
+    }
+    .vacancy-menu {
+        position: static;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .vacancy-info {
+        width: 100%;
     }
 
 }
@@ -1146,6 +1287,13 @@ footer .title {
     }
     .events-page .to-news, .events-page .to-events {
         top: 45px;
+    }
+    .vacancies-absent-page .text {
+        padding: 2em 4em 2em 1em;
+        margin-bottom: 5%;
+    }
+    .vacancies-absent-page .text p {
+        font-size: 1.1em;
     }
 
 
