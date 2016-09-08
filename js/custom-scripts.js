@@ -140,5 +140,23 @@ $(document).ready(function () {
         autoplaySpeed: 6000
     });
 
+    var customSlider = $('.slider');
+    customSlider.slick({
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 6000
+    });
+
+    customSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $('.slider-dots .active').removeClass('active');
+        $('.slider-dots li').eq(nextSlide).addClass('active');
+    });
+
+    $('.slider-dots li a').click(function() {
+        var newIndex = $(this).parents('li').index();
+        customSlider.slick('slickGoTo', newIndex);
+        return false;
+    });
+
 });
 

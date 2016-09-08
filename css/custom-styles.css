@@ -914,12 +914,6 @@ footer .title {
 **** vacancies-absent-page ****
 ******************************/
 
-/*.vacancies-absent-page {
-    margin-bottom: 10%;
-    padding-bottom: 15%;
-    background: transparent url('../source/images/background-no-vacanvies-full.png') no-repeat center;
-    background-size: cover;
-}*/
 .vacancies-absent-page .wrapper:after {
     content: '';
     display: block;
@@ -954,6 +948,203 @@ footer .title {
     margin-top: 0.8em;
 }
 
+/******************************
+******** weddings page ********
+******************************/
+
+.slider {
+    margin-top: 30px;
+}
+.slider .slide {
+    position: relative;
+    outline: none;
+}
+.slider img {
+    display: block;
+    width: 64.5%;
+    float: left;
+}
+.slider .slide > div {
+    background-color: #ed6c05;
+    width: 35.5%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 3em;
+}
+.slider .slide p {
+    display: block;
+    color: #ffffff;
+    font-size: 1.125em;
+    margin: 0 0 0 12%;
+    padding-right: 15px;
+}
+.slider .slide .title {
+    font-size: 2em;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+.slider .slick-arrow {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid transparent;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    font-size: 0;
+    background: transparent url('../source/images/sprite-slider.png') no-repeat;
+    background-size: cover;
+    color: transparent;
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+    z-index: 1;
+}
+.slider .slick-prev {
+    background: transparent url('../source/images/sprite-slider.png') no-repeat left center;
+    background-size: cover;
+    right: 26%;
+}
+.slider .slick-next {
+    background: transparent url('../source/images/sprite-slider.png') no-repeat right center;
+    background-size: cover;
+    right: 20%;
+}
+.slider .slick-arrow:hover {
+    border: 1px solid #ffffff;
+}
+
+.slider-dots {
+    text-align: center;
+    margin-top: 30px;
+}
+.slider-dots li {
+    text-align: center;
+    width: 75px;
+    vertical-align: top;
+    margin: 0 25px 25px;
+    position: relative;
+}
+.slider-dots li a {
+    display: block;
+}
+.slider-dots li:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #ed6c05;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+    z-index: 1;
+}
+.slider-dots li a p {
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+.slider-dots li:hover:after {
+    width: 100%;
+}
+.slider-dots li a:hover {
+    text-decoration: none;
+}
+.slider-dots li a:hover p, .slider-dots li.active a p {
+    color: #ed6c05;
+}
+
+.services {
+    border-bottom: 1px solid #ed6c05;
+    border-top: 1px solid #ed6c05;
+    padding: 5px 0;
+    -moz-text-align-last: justify;
+    -ms-text-align-last: justify;
+    text-align-last: justify;
+    text-align: justify;
+    height: 45px;
+ }
+.services:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+.services li a {
+    display: block;
+    height: 45px;
+    line-height: 43px;
+    margin-top: -5px;
+}
+.services li a:hover {
+    color: #ed6c05;
+    text-decoration: none;
+}
+
+.service-info {
+    padding: 5% 0;
+}
+.service-info .image-wrap {
+    width: 50%;
+    padding-top: 37%;
+    float: left;
+    margin-right: 20px;
+}
+.service-info .title {
+    margin: 0;
+    font-size: 1.875em;
+    font-family: 'RobotoCondensed Bold', sans-serif;
+}
+
+.image-gallery:after {
+    content: '';
+    display: block;
+    clear: both;
+    margin-bottom: 20px;
+}
+.image-gallery .title {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2em;
+}
+.image-gallery .title:before {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #ed6c05;
+    position: absolute;
+    top: 1em;
+    left: 0;
+    right: 0;
+}
+.image-gallery .title p {
+    display: inline-block;
+    font-size: 1.875em;
+    margin: 0;
+    background-color: #ffffff;
+    padding: 0 1.5em;
+    position: relative;
+    z-index: 1;
+    line-height: 1;
+}
+.image-gallery li {
+    display: block;
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+}
+.image-gallery li:nth-child(3n) {
+    margin-right: 0;
+}
 
 /******************************
 ******** media queries ********
@@ -1102,6 +1293,43 @@ footer .title {
         padding: 6em 4em 5em 3em;
         margin-bottom: 5%;
     }
+    .slider img {
+        width: 50%;
+    }
+    .slider .slide > div {
+        width: 50%;
+        padding-top: 1em;
+    }
+    .slider .slick-arrow {
+        bottom: 5%;
+        width: 35px;
+        height: 35px;
+    }
+    .slider .slick-prev {
+        right: 41%;
+    }
+    .slider .slick-next {
+        right: 35%;
+    }
+    .services {
+        padding: 10px 0 5px;
+        -moz-text-align-last: left;
+        -ms-text-align-last: left;
+        text-align-last: left;
+        text-align: left;
+        height: auto;
+    }
+    .services:after {
+        display: none;
+    }
+    .services li {
+        margin: 0 10px 10px 10px;
+    }
+    .services li a {
+        height: auto;
+        line-height: 1.2;
+        margin: 0;
+    }
 
 }
 
@@ -1223,6 +1451,30 @@ footer .title {
     .vacancy-info {
         width: 100%;
     }
+    .slider img {
+        display: none;
+    }
+    .slider .slide {
+
+    }
+    .slider .slide > div {
+        width: 100%;
+        padding: 3em 0 5em;
+        position: static;
+        height: 300px;
+    }
+    .slider .slick-arrow {
+        bottom: 10%;
+        width: 50px;
+        height: 50px;
+        right: auto;
+    }
+    .slider .slick-prev {
+        left: 10%;
+    }
+    .slider .slick-next {
+        left: 20%;
+    }
 
 }
 
@@ -1294,6 +1546,11 @@ footer .title {
     }
     .vacancies-absent-page .text p {
         font-size: 1.1em;
+    }
+    .image-gallery li {
+        float: none;
+        width: 100%;
+        margin: 10px 0;
     }
 
 
