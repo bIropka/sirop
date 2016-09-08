@@ -1276,6 +1276,104 @@ footer .title {
     left: 0;
     top: 0;
 }
+
+
+/******************************
+******** contacts page ********
+******************************/
+
+.contacts-page {
+    padding: 0;
+    margin: 0;
+    height: 650px;
+    position: relative;
+}
+.contacts-page .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.contacts-block {
+    width: 400px;
+    min-width: 300px;
+    background-color: #ffffff;
+    padding: 35px 30px;
+    margin-top: 7%;
+}
+.contacts-page p {
+    margin-top: 0;
+}
+.contacts-list {
+    margin: 20px 0 15px;
+}
+.contacts-list li {
+    position: relative;
+    padding-left: 70px;
+    margin-bottom: 20px;
+}
+.contacts-list li:nth-child(3) a {
+    display: block;
+    font-size: 1.5em;
+}
+.contacts-list li:nth-child(4) a {
+    display: inline-block;
+    height: 39px;
+    line-height: 39px;
+}
+.contacts-list li:before {
+    content: '';
+    display: block;
+    width: 39px;
+    height: 39px;
+    background: #ed6c05 url('../source/images/sprite-contacts.png') no-repeat 0 center;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.contacts-list li:nth-child(2):before {
+    background-position: -39px center;
+}
+.contacts-list li:nth-child(3):before {
+    background-position: -78px center;
+}
+.contacts-list li:nth-child(4):before {
+    background-position: -117px center;
+}
+.contacts-page .social-links {
+    margin-left: 70px;
+}
+.contacts-page .social-links li {
+    border: 1px solid #ed6c05;
+    overflow: hidden;
+}
+.contacts-page .social-links .link-vk {
+    background-position: -150px center;
+}
+.contacts-page .social-links .link-vk:hover {
+    background-position: 0 center;
+    background-color: #ed6c05;
+}
+.contacts-page .social-links .link-fb {
+    background-position: -200px center;
+}
+.contacts-page .social-links .link-fb:hover {
+    background-position: -50px center;
+    background-color: #ed6c05;
+}
+.contacts-page .social-links .link-inst {
+    background-position: right center;
+}
+.contacts-page .social-links .link-inst:hover{
+    background-position: -100px center;
+    background-color: #ed6c05;
+}
+
+
 /******************************
 ******** media queries ********
 ******************************/
@@ -1716,6 +1814,20 @@ footer .title {
     }
     .night-order:before {
         background-position: -200px center;
+    }
+    .contacts-page {
+        height: auto;
+    }
+    .contacts-page .wrapper {
+        position: static;
+    }
+    .contacts-block {
+        width: 100%;
+        padding: 0 0 30px 0;
+    }
+    .on-map {
+        height: 300px;
+        overflow: hidden;
     }
 
 
