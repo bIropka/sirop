@@ -1166,6 +1166,117 @@ footer .title {
 }
 
 /******************************
+********** delivery ***********
+******************************/
+
+.delivery ul, .why-we ul {
+    margin: 20px 0;
+}
+.why-we .title, .minimal-order .title {
+    font-family: 'RobotoCondensed Bold', sans-serif;
+    font-size: 1.875em;
+    margin-top: 0;
+}
+.minimal-order .title {
+    color: #ffffff;
+}
+.delivery ul li, .why-we ul li {
+    display: block;
+    width: 32%;
+    margin-right: 2%;
+    float: left;
+    padding-left: 100px;
+    position: relative;
+    min-width: 300px;
+}
+.delivery ul li:last-child, .why-we ul li:last-child {
+    margin-right: 0;
+}
+.delivery ul li p, .why-we ul li p {
+    margin-top: 10px;
+}
+.delivery ul li:before, .why-we ul li:before, .day-order:before, .night-order:before {
+    content: '';
+    display: block;
+    background: transparent url('../source/images/sprite-delivery.png') no-repeat 0 center;
+    background-size: auto 100%;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.delivery ul li:nth-child(2):before {
+    background-position: -80px center;
+}
+.delivery ul li:nth-child(3):before {
+    background-position: -160px center;
+}
+.why-we ul li:nth-child(1):before {
+    background-position: -400px center;
+}
+.why-we ul li:nth-child(2):before {
+    background-position: -480px center;
+}
+.why-we ul li:nth-child(3):before {
+    background-position: -560px center;
+}
+.day-order:before {
+    background-position: -240px center;
+}
+.night-order:before {
+    background-position: -320px center;
+}
+
+.minimal-order {
+    background: transparent url('../source/images/background-all-icons-color.jpg') no-repeat center;
+    background-size: cover;
+    padding: 40px 0;
+    margin: 40px 0;
+}
+.day-order, .night-order {
+    display: block;
+    padding-left: 100px;
+    position: relative;
+    margin-top: 30px;
+    float: left;
+}
+.night-order {
+    float: right;
+}
+.day-order .cost-order, .night-order .cost-order {
+    color: #ffffff;
+    margin-top: 0;
+    vertical-align: middle;
+    font-family: 'RobotoCondensed Bold', sans-serif;
+    font-size: 1.875em;
+}
+.day-order .cost-order span, .night-order .cost-order span {
+    font-family: 'RobotoCondensed Bold', sans-serif;
+    font-size: 3.333333333em;
+    color: #ffffff;
+    line-height: 0.7;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.time-order {
+    margin-top: 20px;
+    margin-left: 10px;
+    padding-left: 25px;
+    position: relative;
+    color: #ffffff;
+}
+.time-order:before {
+    content: '';
+    display: block;
+    background: transparent url('../source/icons/icon-clock.png') no-repeat center;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/******************************
 ******** media queries ********
 ******************************/
 
@@ -1353,6 +1464,13 @@ footer .title {
         margin: 0 25px 25px;
         display: inline-block;
         float: none;
+    }
+    .day-order, .night-order {
+        float: none;
+        margin: 25px 0;
+    }
+    .delivery ul li, .why-we ul li {
+        margin-bottom: 40px;
     }
 
 }
@@ -1575,6 +1693,29 @@ footer .title {
         float: none;
         width: 100%;
         margin: 10px 0;
+    }
+    .day-order, .night-order {
+        padding-left: 60px;
+    }
+    .day-order:before, .night-order:before {
+        width: 50px;
+        height: 50px;
+    }
+    .day-order .cost-order, .night-order .cost-order {
+        font-size: 1.2em;
+    }
+    .day-order .cost-order span, .night-order .cost-order span {
+        font-size: 3em;
+        color: #ffffff;
+        line-height: 0.7;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    .day-order:before {
+        background-position: -150px center;
+    }
+    .night-order:before {
+        background-position: -200px center;
     }
 
 
