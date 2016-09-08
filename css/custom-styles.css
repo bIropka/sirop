@@ -1410,6 +1410,65 @@ footer .title {
     color: #ed6c05;
 }
 
+/******************************
+********** cakes page *********
+******************************/
+
+.gallery-products {
+    display: block;
+    width: 30%;
+    float: right;
+    margin-left: 30px;
+}
+.gallery-products li {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+.gallery-products li:last-child {
+    margin-bottom: 0;
+}
+.cakes-page .text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 65%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+}
+
+.cakes-page .phone {
+    font-size: 1.5em;
+    color: #ed6c05;
+    margin-top: 20px;
+    position: relative;
+    padding-left: 50px;
+    line-height: 39px;
+    height: 39px;
+    white-space: nowrap;
+}
+.cakes-page .phone:before {
+    content: '';
+    display: block;
+    width: 39px;
+    height: 39px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background: #ed6c05 url('../source/images/sprite-contacts.png') no-repeat -78px center;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.cakes-page .phone a {
+    font-size: 1em;
+    color: #ed6c05;
+}
+.cakes-page .phone a:hover {
+    text-decoration: none;
+}
 
 /******************************
 ******** media queries ********
@@ -1779,6 +1838,15 @@ footer .title {
     .delivery-streets {
         padding-left: 20px;
     }
+    .cakes-page .text-block {
+        display: block;
+        width: 60%;
+        position: static;
+        float: left;
+    }
+    .cakes-page .phone {
+        font-size: 1.2em;
+    }
 
 }
 
@@ -1892,6 +1960,27 @@ footer .title {
     .on-map {
         height: 300px;
         overflow: hidden;
+    }
+    .cakes-page .text-block, .cakes-page .gallery-products {
+        display: block;
+        width: 100%;
+        float: none;
+        margin: 0;
+    }
+    .cakes-page .text-block {
+        margin-top: 30px;
+    }
+    .cakes-page .phone {
+        font-size: 1em;
+        padding-left: 30px;
+        line-height: 25px;
+        height: 25px;
+    }
+    .cakes-page .phone:before {
+        width: 25px;
+        height: 25px;
+        background: #ed6c05 url('../source/images/sprite-contacts.png') no-repeat -50px center;
+        background-size: auto 100%;
     }
 
 
