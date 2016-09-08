@@ -1147,6 +1147,25 @@ footer .title {
 }
 
 /******************************
+******** catering page ********
+******************************/
+
+.catering-page .slider-dots li {
+    vertical-align: top;
+    margin: 0 27px 25px 0;
+    float: left;
+    display: block;
+}
+.catering-page .slider-dots:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.catering-page .slider-dots li:last-child {
+    margin-right: 0;
+}
+
+/******************************
 ******** media queries ********
 ******************************/
 
@@ -1329,6 +1348,11 @@ footer .title {
         height: auto;
         line-height: 1.2;
         margin: 0;
+    }
+    .catering-page .slider-dots li {
+        margin: 0 25px 25px;
+        display: inline-block;
+        float: none;
     }
 
 }
