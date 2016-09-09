@@ -720,15 +720,15 @@ footer .title {
 /******************************
 ******** events page **********
 ******************************/
-.events-page .to-news, .events-page .to-events {
+.to-news, .to-events {
     position: absolute;
     top: 0;
     right: 0;
 }
-.events-page .to-news {
+.to-news {
     right: 150px;
 }
-.events-page .to-news:after, .events-page .to-events:after {
+.to-news:after, .to-events:after {
     display: none;
 }
 .events-page .events-list {
@@ -1471,6 +1471,12 @@ footer .title {
 }
 
 /******************************
+*********** news **************
+******************************/
+
+
+
+/******************************
 ******** media queries ********
 ******************************/
 
@@ -1603,10 +1609,10 @@ footer .title {
     .main-slider .slide-text {
         width: 50%;
     }
-    .events-page .to-news {
+    .to-news {
         right: 160px;
     }
-    .events-page .to-events {
+    .to-events {
         right: 10px;
     }
     .vacancies-absent-page .wrapper:after, .vacancies-absent-page:after {
@@ -1909,7 +1915,7 @@ footer .title {
     .events-page .events-list li:first-child {
         margin-top: 0;
     }
-    .events-page .to-news, .events-page .to-events {
+    .to-news, .to-events {
         top: 45px;
     }
     .vacancies-absent-page .text {
