@@ -1474,7 +1474,56 @@ footer .title {
 *********** news **************
 ******************************/
 
-
+.news-list {
+    margin: 30px 0;
+}
+.news-list:after, .news-list li:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.news-list li {
+    display: block;
+    width: 32%;
+    margin: 0 2% 2% 0;
+    float: left;
+    padding-bottom: 10px;
+}
+.news-list li:nth-child(3n) {
+    margin-right: 0;
+}
+.news-list li .image-wrap {
+    width: 100%;
+    padding-top: 62.5%;
+}
+.news-list li .image-wrap img {
+    width: 100%;
+    height: auto;
+}
+.news-list h6 {
+    margin: 10px 0 15px;
+    padding: 0 10px;
+    text-align: center;
+}
+.news-list .date {
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+}
+.news-list a {
+    float: right;
+    margin-right: 10px;
+    text-decoration: underline;
+}
+.news-list a:hover {
+    text-decoration: none;
+}
+.news-list .date, .news-list a {
+    font-size: 0.875em;
+}
+.news-list li:hover {
+    background-color: #f5f5f5;
+}
 
 /******************************
 ******** media queries ********
@@ -1681,6 +1730,13 @@ footer .title {
     .delivery-streets-page .contacts-block .phones a {
         font-size: 1.2em;
     }
+    .news-list li, .news-list li:nth-child(3n) {
+        width: 47.5%;
+        margin: 0 5% 5% 0;
+    }
+    .news-list li:nth-child(2n) {
+        margin-right: 0;
+    }
 
 }
 
@@ -1853,6 +1909,12 @@ footer .title {
     .cakes-page .phone {
         font-size: 1.2em;
     }
+    .news-list li, .news-list li:nth-child(3n), .news-list li:nth-child(2n) {
+        width: 100%;
+        max-width: 480px;
+        margin: 2.5% auto;
+        float: none;
+    }
 
 }
 
@@ -1987,6 +2049,9 @@ footer .title {
         height: 25px;
         background: #ed6c05 url('../source/images/sprite-contacts.png') no-repeat -50px center;
         background-size: auto 100%;
+    }
+    .news-list {
+        margin-top: 80px;
     }
 
 
