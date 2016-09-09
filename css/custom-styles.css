@@ -1580,6 +1580,75 @@ footer .title {
     display: block;
     clear: both;
 }
+
+/******************************
+********** about-us ***********
+******************************/
+
+.info-block {
+    position: relative;
+    display: block;
+}
+.info-block:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.info-block .image-wrap {
+    width: 45%;
+    padding-top: 30%;
+    float: left;
+    margin-right: 5%;
+}
+.info-block:nth-child(2n) .image-wrap {
+    float: right;
+    margin: 0 0 0 5%;
+}
+
+.info-block .text {
+    padding: 40px 0;
+}
+.info-block:before {
+    content: '';
+    display: block;
+    width: 70%;
+    position: absolute;
+    left: 0;
+    bottom: 15%;
+    height: 1px;
+    background-color: #ed6c05;
+    z-index: 1;
+}
+.info-block:nth-child(1):before, .info-block:nth-child(4):before {
+    display: none;
+}
+.info-block:nth-child(3):before {
+    right: 0;
+    left: auto;
+}
+
+.about-us-page h1, .about-us-page .phones p, .about-us-page .phones a {
+    color: #ed6c05;
+}
+.about-us-page .phones p {
+    margin: 20px 0 15px;
+}
+.about-us-page .phones a {
+    font-size: 1.5em;
+}
+
+.info-block ul {
+    display: block;
+
+    margin-top: 20px;
+}
+.info-block ul li {
+    display: block;
+}
+.info-block ul li:before {
+    content: '-';
+    margin-right: 5px;
+}
 /******************************
 ******** media queries ********
 ******************************/
@@ -1791,6 +1860,19 @@ footer .title {
     }
     .news-list li:nth-child(2n) {
         margin-right: 0;
+    }
+    .info-block .image-wrap, .info-block:nth-child(2n) .image-wrap {
+        width: 450px;
+        padding-top: 0;
+        height: 300px;
+        float: none;
+        margin: 30px 0;
+    }
+    .info-block .text {
+        padding: 0;
+    }
+    .info-block:before {
+        display: none;
     }
 
 }
@@ -2118,6 +2200,11 @@ footer .title {
         padding-top: 62.5%;
         float: none;
         margin: 0 0 5% 0;
+    }
+    .info-block .image-wrap, .info-block:nth-child(2n) .image-wrap {
+        width: 100%;
+        padding-top: 66.66666666666667%;
+        height: auto;
     }
 
 
