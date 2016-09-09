@@ -20,6 +20,16 @@ $(document).ready(function () {
         }
     });
 
+    initCounters();
+
+    function initCounters() {
+        var counters = document.getElementsByClassName('dish-counter');
+        for (var i = 0; i < counters.length; i++) {
+            var amount = parseInt($(counters[i]).find('input').val());
+            $(counters[i]).find('.current-value').html(amount);
+        }
+    }
+
     /******************************
      ******* other scripts ********
      ******************************/
@@ -126,6 +136,26 @@ $(document).ready(function () {
     inputTel.mask("+7 ( 999 ) 999 - 99 - 99");
     inputTel.click(function() {
         $(this).focus();
+    });
+
+    $('.filter li').click(function() {
+        $('.filter .active').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $('.dish-counter .control').click(function() {
+
+        var inputValue = parseInt($(this).siblings('label').find('input').val());
+
+        if($(this).hasClass('increment')) {
+            inputValue++;
+        } else if($(this).hasClass('decrement') && inputValue > 1) {
+            inputValue--;
+        }
+
+        $(this).siblings('.current-value').html(inputValue);
+        $(this).siblings('label').find('input').val(inputValue);
+
     });
 
     /*******************************

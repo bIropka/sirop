@@ -102,6 +102,9 @@ h6 {
 p {
     margin-top: 1.25em;
 }
+.hidden {
+    display: none;
+}
 .small-margin {
     margin-top: 0.5em;
 }
@@ -1649,6 +1652,188 @@ footer .title {
     content: '-';
     margin-right: 5px;
 }
+
+/******************************
+************ menu *************
+******************************/
+
+.filter {
+    margin-top: 20px;
+}
+.filter li {
+    font-size: 1.125em;
+    line-height: 1;
+    padding: 7px 20px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: 1px solid #f0efef;
+    background-color: #f0efef;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+.filter li:hover {
+    background-color: #ffffff;
+}
+.filter li.active {
+    border: 1px solid #ed6c05;
+    background-color: #ffffff;
+}
+
+.menu-list {
+    margin: 30px 0;
+}
+.menu-list:after, .menu-list li:after, .menu-list li .dish-counter:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.menu-list li {
+    display: block;
+    width: 32%;
+    margin: 0 2% 5% 0;
+    float: left;
+}
+.menu-list li:nth-child(3n) {
+    margin-right: 0;
+}
+.dish-image {
+    padding-top: 62.5%;
+    position: relative;
+}
+.dish-image img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.dish-cost {
+    display: inline-block;
+    background-color: #ed6c05;
+    font-size: 1.5em;
+    color: #ffffff;
+    line-height: 1;
+    padding: 15px 10px 15px 50px;
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+}
+.dish-cost:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 0.625em solid transparent;
+    border-right: 0.625em solid transparent;
+    border-bottom: 2.3em solid #ed6c05;
+    position: absolute;
+    bottom: 0;
+    left: -0.625em;
+}
+.dish-cost:after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 28px;
+    background: transparent url('../source/icons/icon-cart-2.png') no-repeat center;
+    background-size: cover;
+    position: absolute;
+    left: 10px;
+    top: 0.5em;
+}
+.dish-name {
+    font-size: 1.375em;
+    text-align: center;
+    margin: 10px 0;
+}
+.menu-list li .dish-counter {
+    float: left;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    border: 1px solid #cdcdcd;
+    width: 120px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.menu-list li .dish-counter .control {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+.menu-list li .dish-counter .decrement {
+    border-top: 12px solid #ed6c05;
+    left: 15px;
+}
+.menu-list li .dish-counter .increment {
+    border-bottom: 12px solid #ed6c05;
+    right: 15px;
+}
+.menu-list li .dish-counter .decrement:hover {
+    -webkit-transform: scale(1.2) translateY(3px);
+    -moz-transform: scale(1.2) translateY(3px);
+    -ms-transform: scale(1.2) translateY(3px);
+    -o-transform: scale(1.2) translateY(3px);
+    transform: scale(1.2) translateY(3px);
+}
+.menu-list li .dish-counter .increment:hover {
+    -webkit-transform: scale(1.2) translateY(-3px);
+    -moz-transform: scale(1.2) translateY(-3px);
+    -ms-transform: scale(1.2) translateY(-3px);
+    -o-transform: scale(1.2) translateY(-3px);
+    transform: scale(1.2) translateY(-3px);
+}
+.menu-list li .dish-counter .current-value {
+    font-size: 1.5em;
+    line-height: 38px;
+}
+
+.menu-list li button {
+    float: right;
+    padding: 0.625em 3em 0.75em 1.5em;
+}
+
+/******************************
+******** media queries ********
+******************************/
+
+
+/******************************
+******** media queries ********
+******************************/
+
+/******************************
+******** media queries ********
+******************************/
+
+/******************************
+******** media queries ********
+******************************/
+
+
+
 /******************************
 ******** media queries ********
 ******************************/
@@ -1874,6 +2059,15 @@ footer .title {
     .info-block:before {
         display: none;
     }
+    .menu-list li, .menu-list li:nth-child(3n) {
+        display: block;
+        width: 47.5%;
+        margin: 0 5% 5% 0;
+        float: left;
+    }
+    .menu-list li:nth-child(2n) {
+        margin-right: 0;
+    }
 
 }
 
@@ -2052,6 +2246,25 @@ footer .title {
         margin: 2.5% auto;
         float: none;
     }
+    .menu-list li, .menu-list li:nth-child(3n), .menu-list li:nth-child(2n) {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto 25px;
+        float: none;
+    }
+    .menu-list li .dish-counter {
+        height: 37px;
+    }
+    .menu-list li .dish-counter .current-value {
+        line-height: 35px;
+    }
+    .filter {
+        text-align: center;
+    }
+    .filter li {
+        margin: 10px;
+    }
+
 
 }
 
