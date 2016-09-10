@@ -888,11 +888,8 @@ footer .title {
 .vacancy-header .vacancy-info-item:first-child {
     margin-right: 50px;
 }
-.vacancy-info form {
+.vacancy-info button {
     margin-top: 50px;
-}
-.vacancy-info form input {
-    display: none;
 }
 
 /******************************
@@ -2279,7 +2276,7 @@ footer .title {
 ************ modals ***********
 ******************************/
 
-.window-callback {
+.window-callback, .window-cv {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -2289,8 +2286,10 @@ footer .title {
     display: none;
     text-align: left;
     z-index: 100;
+    overflow: auto;
 }
-.form-callback {
+
+.form-callback, .form-cv {
     position: absolute;
     width: 320px;
     height: 290px;
@@ -2304,7 +2303,11 @@ footer .title {
     background-color: #ffffff;
     z-index: 101;
 }
-.form-callback .close-marker {
+.form-cv {
+    padding: 15px 20px;
+    height: 480px;
+}
+.form-callback .close-marker, .form-cv .close-marker {
     display: block;
     width: 25px;
     height: 25px;
@@ -2319,23 +2322,84 @@ footer .title {
     right: 5px;
     cursor: pointer;
 }
-.form-callback .close-marker:hover {
+.form-callback .close-marker:hover, .form-cv .close-marker:hover, .form-cv .file-upload .remove-file:hover {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
-.form-callback .title {
+.form-callback .title, .form-cv .title {
     font-family: 'RobotoCondensed Bold', sans-serif;
     font-size: 1.875em;
     color: #ed6c05;
     margin-top: 0;
     margin-bottom: 20px;
 }
-.form-callback .form-submit {
+.form-cv .form-textarea-wrap {
+    height: 100px;
+}
+.form-callback .form-submit, .form-cv .form-submit {
     width: 100%;
     margin-top: 20px;
+}
+
+.form-cv .file-upload {
+    display: block;
+    width: 100%;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 10px 25px 10px 10px;
+    background-size: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+}
+.form-cv .file-upload .remove-file {
+    display: none;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 10px;
+    cursor: pointer;
+    z-index: 105;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+.form-cv .file-upload .remove-file.active {
+    display: block;
+}
+.form-cv .file-upload input {
+    opacity: 0;
+    display: block;
+    width: 1px;
+    height: 1px;
+}
+.form-cv .file-upload .file-name {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.form-cv .file-upload .file-type {
+    color: #8b8b8b;
+    opacity: 1;
+}
+.form-cv .file-upload .file-type.hidden {
+    opacity: 0;
 }
 
 
@@ -2849,6 +2913,9 @@ footer .title {
     .form-order > .form-field-wrap, .form-order .delivery-only {
         width: 100%;
         margin: 0 0 10px 0;
+    }
+    .form-cv {
+        bottom: auto;
     }
 
 

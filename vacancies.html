@@ -133,10 +133,7 @@
                 <p>Полная занятость, сменный график</p>
             </div>
 
-            <form action="#" id="form-upload">
-                <label for="field-upload" class="custom-button">Оставить резюме</label>
-                <input type="file" id="field-upload">
-            </form>
+            <button class="custom-button send-cv">Отправить резюме</button>
 
         </div>
 
@@ -249,6 +246,43 @@
         </label>
 
         <button type="submit" class="form-submit custom-button">Перезвоните мне</button>
+
+    </form>
+
+</div>
+
+<div class="window-cv">
+
+    <form action="#" class="form-cv">
+
+        <div class="close-marker">&#10006;</div>
+
+        <p class="title">Отправить резюме</p>
+
+        <label class="form-field-wrap">
+            <input type="text" id="cv-name"  pattern="^[А-Яа-я]+$" class="form-field" placeholder="Ваше имя" required>
+        </label>
+
+        <label class="form-field-wrap">
+            <input type="tel" id="cv-tel" class="form-field" placeholder="Телефон" required>
+        </label>
+
+        <label class="form-field-wrap">
+            <input type="email" id="cv-email" class="form-field" placeholder="E-mail" required>
+        </label>
+
+        <label class="form-field-wrap form-textarea-wrap">
+            <textarea id="cv-text" cols="" rows="" class="form-field" placeholder="Сопроводительное письмо"></textarea>
+        </label>
+
+        <label class="file-upload">
+            <span class="remove-file">&#10006;</span>
+            <span class="file-name">Загрузить резюме</span>
+            <span class="file-type">pdf. doc. txt.</span>
+            <input type="file" id="cv-upload"/>
+        </label>
+
+        <button type="submit" class="form-submit custom-button">Отправить резюме</button>
 
     </form>
 

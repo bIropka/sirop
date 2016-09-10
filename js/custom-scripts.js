@@ -110,6 +110,15 @@ $(document).ready(function () {
         if ($target.hasClass('close-marker')) $('.window-callback').fadeOut();
     });
 
+    $('.send-cv').click(function () {
+        $('.window-cv').fadeIn();
+    });
+    $('.window-cv').click(function (event) {
+        $target = $(event.target);
+        if (!$target.closest($('.form-cv')).length) $('.window-cv').fadeOut();
+        if ($target.hasClass('close-marker')) $('.window-cv').fadeOut();
+    });
+
     $('input').on('focus', function() {
         $(this).removeClass('valid-field invalid-field');
     });
@@ -181,6 +190,24 @@ $(document).ready(function () {
             $('.custom-select ul').slideUp();
         }
 
+    });
+
+    $('#cv-upload').on('change', function(){
+
+        var temp = $(this).val().split('\\');
+        var fileName = temp[temp.length - 1];
+        $(this).siblings('.file-name').html(fileName);
+        $(this).siblings('.file-type').addClass('hidden');
+        $(this).siblings('.remove-file').addClass('active');
+
+    });
+
+    $('.remove-file').click(function() {
+        $(this).removeClass('active');
+        $(this).siblings('.file-type').removeClass('hidden');
+        $(this).siblings('.file-name').html('Прикрепите файл');
+        $('#cv-upload').val('');
+        return false;
     });
 
     /*******************************
