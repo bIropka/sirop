@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/custom-styles.css"/>
+</head>
+<body>
+
+<header role="banner">
+
+    <div class="wrapper">
+
+        <div class="header-top">
+
+            <a href="index.html" class="logo"></a>
+
+            <div class="phones">
+                <a href="tel:+89263551015">8 (926) 355-10-15</a>
+            </div>
+
+            <a href="#" class="callback">Перезвоните мне</a>
+
+            <a href="delivery-streets.html" class="header-link">Улицы доставки</a>
+
+            <div class="cart">
+                <a href="cart.html">Корзина (<span>0</span>)</a>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="header-nav">
+
+        <div class="wrapper">
+
+            <div class="burger"></div>
+
+            <nav>
+
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li>
+                        <p>Доставка</p>
+                        <ul>
+                            <li><a href="#">Ссылка 1</a></li>
+                            <li><a href="#">Ссылка с очень длинным названием 2</a></li>
+                            <li><a href="#">Ссылка 3</a></li>
+                            <li><a href="#">Ссылка 4</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="weddings.html">Банкеты и свадьбы</a></li>
+                    <li><a href="catering.html">Кейтеринг</a></li>
+                    <li><a href="news.html">Новости и акции</a></li>
+                    <li><a href="cakes.html">Торты на заказ</a></li>
+                    <li><a href="about-us.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+<main class="cart-page">
+
+    <div class="wrapper">
+
+        <h1>Корзина</h1>
+
+        <div class="cart">
+
+            <ul>
+
+                <li class="top-row">
+
+                    <div class="product-name">Название</div>
+
+                    <div class="product-cost">Цена, руб.</div>
+
+                    <div class="product-amount">Количество</div>
+
+                    <div class="product-sum">Всего, руб.</div>
+
+                    <div class="product-remove">Убрать</div>
+
+                </li>
+
+                <li>
+
+                    <div class="product-name">Барбекю 30 см тесто стандартное</div>
+
+                    <div class="product-cost">520</div>
+
+                    <div class="product-amount">
+                        <div class="dish-counter">
+                            <div class="decrement control"></div>
+                            <div class="current-value"></div>
+                            <div class="increment control"></div>
+                            <label><input type="number" class="hidden" value="2"/></label>
+                        </div>
+                    </div>
+
+                    <div class="product-sum">1040</div>
+
+                    <div class="product-remove">X</div>
+
+                </li>
+
+                <li>
+
+                    <div class="product-name">Ассорти 30 см тесто обычное</div>
+
+                    <div class="product-cost">540</div>
+
+                    <div class="product-amount">
+                        <div class="dish-counter">
+                            <div class="decrement control"></div>
+                            <div class="current-value"></div>
+                            <div class="increment control"></div>
+                            <label><input type="number" class="hidden" value="1"/></label>
+                        </div>
+                    </div>
+
+                    <div class="product-sum">540</div>
+
+                    <div class="product-remove">X</div>
+
+                </li>
+
+            </ul>
+
+            <p class="result-sum">Итого: <span>1580</span> руб.</p>
+
+        </div>
+
+        <div class="order">
+
+            <div class="order-details">
+
+                <div class="order-payment">
+
+                    <p class="title">Способы оплаты</p>
+
+                    <ul>
+                        <li class="active"><a href="#">Наличными курьеру</a></li>
+                        <li><a href="#">Картой Visa/Mastercard с сайта</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="order-delivery">
+
+                    <p class="title">Способы доставки</p>
+
+                    <ul>
+                        <li class="active"><a href="#">Доставка курьером</a></li>
+                        <li><a href="#">Самовывоз</a></li>
+                    </ul>
+
+                    <p>
+                        Мы работаем с районами:<br>Химки, Куркино, Новогорск
+                    </p>
+
+                </div>
+
+            </div>
+
+            <form action="#" class="form-order">
+
+                <p class="title">Оформить заказ</p>
+
+                <label class="form-field-wrap">
+                    <input type="text" id="order-name"  pattern="^[А-Яа-я]+$" class="form-field" placeholder="Ваше имя" required>
+                </label>
+
+                <fieldset class="delivery-only">
+
+                    <label class="form-field-wrap">
+                        <input type="text" id="order-street" class="form-field" placeholder="Улица" required>
+                    </label>
+
+                    <label class="form-field-wrap">
+                        <input type="text" id="order-building" class="form-field" placeholder="Дом" required>
+                    </label>
+
+                    <label class="form-field-wrap">
+                        <input type="text" id="order-building-number" class="form-field" placeholder="Корпус" required>
+                    </label>
+
+                    <label class="form-field-wrap">
+                        <input type="text" id="order-porch" class="form-field" placeholder="Подъезд" required>
+                    </label>
+
+                    <label class="form-field-wrap">
+                        <input type="text" id="order-porch-code" class="form-field" placeholder="Код" required>
+                    </label>
+
+                    <label class="form-field-wrap">
+                        <input type="text" id="order-floor" class="form-field" placeholder="Этаж" required>
+                    </label>
+
+                    <label class="form-field-wrap">
+                        <input type="text" id="order-apartment" class="form-field" placeholder="Квартира" required>
+                    </label>
+
+                </fieldset>
+
+                <label class="form-field-wrap">
+                    <input type="tel" id="order-tel" class="form-field" placeholder="Телефон" required>
+                </label>
+
+                <label class="form-field-wrap">
+                    <input type="email" id="order-email" class="form-field" placeholder="E-mail" required>
+                </label>
+
+                <label class="form-field-wrap form-textarea-wrap">
+                    <textarea id="order-text" cols="" rows="" class="form-field" placeholder="Сообщение" required></textarea>
+                </label>
+
+                <button type="submit" class="form-submit custom-button">Отправить заказ</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</main>
+
+<footer role="contentinfo">
+
+    <div class="wrapper">
+
+        <div class="footer-title">
+
+            <a href="index.html" class="logo"></a>
+
+            <p class="copyrights">© 2008-2016 SERGIO PIZZA</p>
+            <p class="copyrights">СЕРГИЕВ ПОСАД, ЗЕЛЕНОГРАД</p>
+            <p class="copyrights">ВСЕ ПРАВА ЗАЩИЩЕНЫ.</p>
+
+            <ul class="social-links">
+                <li><a href="#" class="link-vk"></a></li>
+                <li><a href="#" class="link-fb"></a></li>
+                <li><a href="#" class="link-inst"></a></li>
+            </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+            <p class="title">Разделы:</p>
+
+            <ul>
+                <li><a href="#">Пиво</a></li>
+                <li><a href="#">Суши</a></li>
+                <li><a href="#">Роллы</a></li>
+                <li><a href="#">Пицца</a></li>
+                <li><a href="#">Осетинские пироги</a></li>
+                <li><a href="#">Шашлыки</a></li>
+                <li><a href="#">Салаты</a></li>
+                <li><a href="#">Закуски</a></li>
+                <li><a href="#">Супы</a></li>
+                <li><a href="#">Горячие блюда</a></li>
+                <li><a href="#">Десерты</a></li>
+                <li><a href="#">Завтраки</a></li>
+                <li><a href="#">Напитки</a></li>
+                <li><a href="#">Доставка воды</a></li>
+            </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+            <p class="title">Информация:</p>
+
+            <ul>
+                <li><a href="cakes.html">Торты на заказ</a></li>
+                <li><a href="catering.html">Кейтеринг</a></li>
+                <li><a href="weddings.html">Банкеты и свадьбы</a></li>
+                <li><a href="about-us.html">О компании</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="questions.html">Вопросы и ответы</a></li>
+                <li><a href="delivery.html">Доставка и оплата</a></li>
+                <li><a href="news.html">Новости и акции</a></li>
+            </ul>
+
+        </div>
+
+        <div class="footer-contacts">
+
+            <p class="title">Контакты:</p>
+
+            <p>
+                Московская область, микрорайон Новогорск (Новые Химки), ЭЖК "Эдем"
+            </p>
+
+            <div class="phones">
+                <a href="tel:+74956466840">+7 (495) 64-66-840</a>
+                <a href="tel:+79263551015">+7 (926) 355-10-15</a>
+            </div>
+
+            <a href="mailto:residenceedem@gmail.com">residenceedem@gmail.com</a>
+
+            <a href="delivery-streets.html">Улицы доставки</a>
+
+            <div class="markello">
+                Разработка сайта:
+                <a href="http://markello.ru">Markello</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/validatr.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/custom-scripts.js"></script>
+</body>
+</html>
