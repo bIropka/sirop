@@ -106,25 +106,8 @@ $(document).ready(function () {
     });
     $('.window-callback').click(function (event) {
         $target = $(event.target);
-        if (!$target.closest($('#form-callback')).length) $('.window-callback').fadeOut();
+        if (!$target.closest($('.form-callback')).length) $('.window-callback').fadeOut();
         if ($target.hasClass('close-marker')) $('.window-callback').fadeOut();
-    });
-    $('.window-successful').click(function (event) {
-        $target = $(event.target);
-        if (!$target.closest($('.message-successful')).length) $('.window-successful').fadeOut();
-    });
-    $('.message-successful button').click(function() {
-        $('.window-successful').fadeOut();
-        $('.window-callback').fadeOut();
-
-    });
-    $('.window-error').click(function (event) {
-        $target = $(event.target);
-        if (!$target.closest($('.message-error')).length) $('.window-error').fadeOut();
-    });
-    $('.message-error button').click(function() {
-        $('.window-error').fadeOut();
-        $('.window-callback').fadeOut();
     });
 
     $('input').on('focus', function() {
