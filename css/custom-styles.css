@@ -422,8 +422,7 @@ nav > ul > li ul li a {
 
 footer[role="contentinfo"] {
     padding: 3.625em 0 1.875em;
-    background: transparent url('../source/images/background-footer.jpg') no-repeat center;
-    background-size: cover;
+    background: transparent url('../source/images/background-footer.jpg') center;
 }
 .footer-title {
     width: 200px;
@@ -622,9 +621,11 @@ footer .title {
 }
 
 .main-page .events {
-     background: transparent url('../source/images/background-all-icons.png') center;
+     background: url('../source/images/background-all-icons.png') center;
      margin-top: 150px;
+    position: relative;
  }
+
 .main-page .events .wrapper {
     border: 1px solid transparent;
     padding: 0 0 80px;
@@ -963,10 +964,16 @@ footer .title {
     padding-right: 15px;
 }
 .slider .slide .title {
+    display: block;
+    color: #ffffff;
     font-size: 2em;
     border-bottom: 1px solid #ffffff;
-    margin-bottom: 15px;
+    margin: 0 0 15px 12%;
     padding-bottom: 15px;
+    padding-right: 15px;
+}
+.slider .slide .title:hover {
+    text-decoration: none;
 }
 .slider .slick-arrow {
     display: block;
@@ -1081,10 +1088,8 @@ footer .title {
     float: left;
     margin-right: 20px;
 }
-.service-info .title {
-    margin: 0;
+.service-info h2 {
     font-size: 1.875em;
-    font-family: 'RobotoCondensed Bold', sans-serif;
 }
 
 .image-gallery:after {
@@ -1675,11 +1680,15 @@ footer .title {
     width: 32%;
     margin: 0 2% 5% 0;
     float: left;
+    text-align: center;
+    position: relative;
+    padding-bottom: 45px;
 }
 .menu-list li:nth-child(3n) {
     margin-right: 0;
 }
 .dish-image {
+    display: block;
     padding-top: 62.5%;
     position: relative;
 }
@@ -1722,20 +1731,35 @@ footer .title {
     left: 10px;
     top: 0.5em;
 }
+.form-dish .custom-select {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    background-color: #ffffff;
+    -ms-text-align-last: right;
+    text-align: left;
+    z-index: 10;
+}
+.form-dish .custom-select ul li {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
 .dish-name {
+    display: inline-block;
     font-size: 1.375em;
-    text-align: center;
     margin: 10px 0;
 }
 .dish-counter {
-    float: left;
+    position: absolute;
+    left: 0;
+    bottom: 0;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     border-radius: 25px;
     border: 1px solid #cdcdcd;
     width: 120px;
     height: 40px;
-    position: relative;
     text-align: center;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -1786,7 +1810,9 @@ footer .title {
 }
 
 .menu-list li button {
-    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     padding: 0.625em 3em 0.75em 1.5em;
 }
 

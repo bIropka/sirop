@@ -171,14 +171,16 @@ $(document).ready(function () {
             $(this).toggleClass('active');
             $(this).siblings('ul').stop().slideToggle();
         }
+        return false;
     });
 
     $('.custom-select ul li').click(function() {
         $(this).parents('.custom-select').find('.current-value').removeClass('active');
-        $(this).parents('ul').slideUp();
+        $(this).parent('ul').slideUp();
         var value = $(this).html();
         $(this).parent().siblings('.current-value').html(value);
         $(this).parent().next().find('input').val(value);
+        return false;
     });
 
     $(document).click(function() {
