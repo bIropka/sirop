@@ -1967,11 +1967,14 @@ footer .title {
     padding-left: 30px;
     position: relative;
 }
+.reviews-info-good {
+    margin-right: 10px;
+}
 .reviews-info-good:before, .reviews-info-bad:before {
     content: '';
     display: block;
     width: 20px;
-    height: 18px;
+    height: 20px;
     background: transparent url('../source/images/sprite-hands.png') no-repeat left center;
     background-size: auto 100%;
     position: absolute;
@@ -2023,6 +2026,7 @@ footer .title {
 .review-text {
     font-family: 'RobotoCondensed Italic', sans-serif;
     font-size: 1.125em;
+    text-align: justify;
 }
 .review-name {
     font-size: 1.5em;
@@ -2060,13 +2064,15 @@ footer .title {
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     border-radius: 25px;
-    line-height: 38px;
     padding: 0 20px;
 }
-.form-field::-webkit-input-placeholder {font-family: 'RobotoCondensed Regular', sans-serif; color: rgba(128, 128, 128, 1);}
-.form-field::-moz-placeholder {font-family: 'RobotoCondensed Regular', sans-serif; color: rgba(128, 128, 128, 1);}
-.form-field:-moz-placeholder {font-family: 'RobotoCondensed Regular', sans-serif; color: rgba(128, 128, 128, 1);}
-.form-field:-ms-input-placeholder {font-family: 'RobotoCondensed Regular', sans-serif; color: rgba(128, 128, 128, 1);}
+.form-textarea-wrap textarea {
+    padding: 10px 20px;
+}
+.form-field::-webkit-input-placeholder {font-size: 0.9em; font-family: 'RobotoCondensed Regular', sans-serif; color: rgba(128, 128, 128, 1);}
+.form-field::-moz-placeholder {font-size: 0.9em; font-family: 'RobotoCondensed Regular', sans-serif; color: rgba(128, 128, 128, 1);}
+.form-field:-moz-placeholder {font-size: 0.9em; font-family: 'RobotoCondensed Regular', sans-serif; color: rgba(128, 128, 128, 1);}
+.form-field:-ms-input-placeholder {font-size: 0.9em; font-family: 'RobotoCondensed Regular', sans-serif; color: rgba(128, 128, 128, 1);}
 
 .form-review .form-submit {
     width: 100%;
@@ -2090,22 +2096,23 @@ footer .title {
     content: '';
     display: block;
     width: 20px;
-    height: 18px;
+    height: 20px;
     background: transparent url('../source/images/sprite-hands.png') no-repeat left center;
     background-size: auto 100%;
     position: absolute;
     top: -3px;
     right: -30px;
 }
-.custom-radio-label:hover:after {
-    background: transparent url('../source/images/sprite-hands-color.png') no-repeat -19px center;
-    background-size: auto 100%;
-}
 .custom-radio-bad:after {
     background-position: right center;
 }
+.custom-radio-label:hover:after {
+    background: transparent url('../source/images/sprite-hands-hover.png') no-repeat left center;
+    background-size: auto 100%;
+}
+
 .custom-radio-bad:hover:after {
-    background-position: 1px center;
+    background-position: right center;
 }
 .custom-radio:checked + .custom-radio-label {
     border: 1px solid #ed6c05;
@@ -2128,6 +2135,7 @@ footer .title {
     float: none;
     height: 40px;
     border: none;
+    position: relative;
 }
 .dish-counter .current-value {
     line-height: 40px;
