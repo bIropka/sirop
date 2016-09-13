@@ -175,6 +175,7 @@ $(document).ready(function () {
 
         var temp = $(this).val().split('\\');
         var fileName = temp[temp.length - 1];
+        
         $(this).siblings('.file-name').html(fileName);
         $(this).siblings('.file-type').addClass('hidden');
         $(this).siblings('.remove-file').addClass('active');
