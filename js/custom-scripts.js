@@ -68,30 +68,7 @@ $(document).ready(function () {
 
     $(function($) {
         $('form').validatr({
-            showall: true,
-            valid: function() {
-                // Получение ID формы
-                var formID = $(this).attr('id');
-                // Добавление решётки к имени ID
-                var formNm = $('#' + formID);
-                var scriptFile;
-                if (formID == 'form-order') scriptFile = 'mail-order.php';
-                if (formID == 'form-callback') scriptFile = 'mail-callback.php';
-                $.ajax({
-                    type: "POST",
-                    url: scriptFile,
-                    data: formNm.serialize(),
-                    success: function (data) {
-                        $('.window-order').fadeOut();
-                        $('.window-successful').fadeIn();
-                    },
-                    error: function (data) {
-                        $('.window-order').fadeOut();
-                        $('.window-error').fadeIn();
-                    }
-                });
-                return false;
-            }
+            showall: true
         });
     });
 
