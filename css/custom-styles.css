@@ -1855,6 +1855,9 @@ footer .title {
 .form-dish-single {
     margin: 20px 0;
 }
+.form-dish-single .dish-counter {
+    position: static;
+}
 .form-dish-single fieldset, .form-dish-single .sub-title, .form-dish-single .dish-counter, .form-dish-single .custom-select {
     display: inline-block;
     vertical-align: middle;
